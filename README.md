@@ -39,10 +39,24 @@ Just pass the ``--no-upload`` flag:
 
 
 ## Dev notes
+These notes are specifically intended for devs. If you installed vupload via
+``pip``, ignore this whole section.
+
 To build on a local dev box, you'll need header files for your version of Python,
 a compiler and the ``make`` command. For CentOS you can run this command to install
 those dependencies:
 
     sudo yum -y install python3-devel make gcc
 
-Once you have those dependencies installed,
+Once you have those dependencies installed, run this command to build and install
+vupload:
+
+    make install
+
+Running this command will delete build artifacts:
+
+    make clean
+
+To remove the vupload Python package, run:
+
+    make uninstall
